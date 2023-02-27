@@ -1,0 +1,17 @@
+import requests
+import json
+
+BASE= "http://127.0.0.1:5000/"
+
+headers= {'Content-type':'application/json'}
+response= requests.post(BASE + "task/1", data = json.dumps({'name': "sai",'age' : 40,'task':'task1'}), headers = {"Content-Type": "application/json"})
+print(response)
+print(response.json())
+input()
+response= requests.get(BASE + "task/1")
+print(response)
+print(response.json)
+
+response= requests.get(BASE + "mtask/102")
+print(response)
+print(response.json)
