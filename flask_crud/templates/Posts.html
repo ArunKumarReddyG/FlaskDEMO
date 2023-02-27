@@ -1,0 +1,14 @@
+{% extends "Base.html" %}
+{% block content %}
+    <div>
+        <h1> This is Postpage</h1>
+    </div>
+    <div>
+        {% for post in posts %}
+            <p>{{post.name}}</p>
+            <p>{{post.content}}</p>
+            <p>{{post.date}}</p>
+        {% endfor %}
+
+    </div>
+{% endblock content %}

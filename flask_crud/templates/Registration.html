@@ -1,0 +1,23 @@
+{% extends "Base.html" %}
+{% block content %}
+    <div>
+        <form action="/reg"  method="POST">
+            <legend>Register Form</legend>
+            {{form.hidden_tag()}}
+            
+             {{form.id.label}} {{form.id}}<br/>
+             <br/>
+             {{form.name.label}}  {{form.name}}<br/>
+             <br/>
+             {{form.gender.label}} {{form.gender}}<br/>
+             <br/>
+             {{form.pwd.label}} {{form.pwd}}<br/>
+             <br/>
+             {{form.cpwd.label}} {{form.cpwd}}<br/>
+             <br/>
+             {{form.submit}}
+
+             
+        </form>
+    </div>
+{% endblock content %}
